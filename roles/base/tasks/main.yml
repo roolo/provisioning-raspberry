@@ -11,3 +11,15 @@
   sudo: yes
   tags:
     - sudoed
+
+- name: Setup overscan
+  lineinfile: line={{item.text}}
+              regexp=^{{ item.text | regex_replace('\=.*$', '') }}
+              state=present
+              dest=/boot/config.txt
+  with_items:
+    - text: 'disable_overscan=0'
+    - text: 'overscan_left=-160'
+    - text: 'overscan_right=-160'
+    - text: 'overscan_top=-160'
+    - text: 'overscan_bottom=-160'

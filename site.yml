@@ -17,6 +17,7 @@
       - wget
       - tmux
       - libnss-mdns # Bonjour
+      - netatalk # Apple Filesharing Protocol
     projects:
     ruby:
       version: ruby-2.2.2

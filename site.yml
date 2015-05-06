@@ -1,0 +1,22 @@
+---
+- hosts:  raspberries
+  user:   pi
+  roles:
+    - { role: git-client,    tags: ['git']  }
+    - { role: zsh-terminal,  tags: ['zsh']  }
+    - { role: vim-machine,   tags: ['vim']  }
+    - { role: ruby-dev,      tags: ['ruby'] }
+    - { role: vnc-server,    tags: ['vnc']  }
+  vars:
+    packages:
+      - openssl
+      - imagemagick
+      - sqlite
+      - htop
+      - curl
+      - wget
+      - tmux
+    projects:
+    ruby:
+      version: ruby-2.2.2
+    machine_name: raspimir

@@ -1,0 +1,14 @@
+---
+- name: Install git
+  apt: name=git state=present
+  sudo: yes
+  tags:
+    - sudoed
+
+- name: Ensure there is place for git stuff
+  file: dest=~/.git state=directory
+
+- name: Copy git global ignore file
+  copy: 'src=gitignore_global dest="{{git_gitignore_global_path}}" force=yes'
+  notify:
+    - Configure the global ignore file

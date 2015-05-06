@@ -1,0 +1,13 @@
+---
+- name: Install packages
+  apt:  name={{item}} state=present
+  sudo: yes
+  tags:
+    - sudoed
+  with_items: packages
+
+- name: Name the RaspberryPi
+  hostname: name={{machine_name}}
+  sudo: yes
+  tags:
+    - sudoed

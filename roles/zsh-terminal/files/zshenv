@@ -1,0 +1,7 @@
+# Aliases
+alias vudit="mvim ~/.vim/config/Vundlefile"
+alias recd="cd ..;cd -"
+alias m="vim -S ./.session.vis"
+
+# OMZ config
+DISABLE_UPDATE_PROMPT=true

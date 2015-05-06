@@ -1,0 +1,23 @@
+---
+- name: Setup RubyGems
+  lineinfile: "dest=~/.gemrc state=present create=yes line='gem: --no-ri --no-rdoc'"
+
+- name: Install GPG since RVM use it
+  apt:  name=gnupg2 state=present
+  sudo: yes
+  tags:
+    - sudoed
+
+- name: Add GPG key for Michal Papis
+  shell: gpg2 --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3
+
+- name: Install latest stable RVM
+  shell: curl -sSL https://get.rvm.io | bash creates=~/.rvm
+
+- name: Install Ruby
+  shell: ~/.rvm/bin/rvm install {{ruby.version}} creates=~/.rvm/rubies/{{ruby.version}}
+  tags:
+    - long
+
+- name: Cleanup RVM
+  shell: ~/.rvm/bin/rvm cleanup all

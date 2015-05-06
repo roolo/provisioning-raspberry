@@ -1,0 +1,24 @@
+---
+- name: Install zsh
+  apt:  name=zsh state=present
+  sudo: yes
+  tags:
+    - sudoed
+
+- name: Clone oh-my-zsh repo
+  git:  repo=git://github.com/robbyrussell/oh-my-zsh.git
+        dest=~/.oh-my-zsh
+
+- name:   Copy zshenv
+  copy:   src=zshenv
+          dest=~/.zshenv
+
+- name:   Configure Oh-my-zsh
+  copy:   src=zshrc
+          dest=~/.zshrc
+
+- name: Set zsh as default shell
+  user: name={{ansible_ssh_user}} shell=/usr/bin/zsh
+  sudo: yes
+  tags:
+    - sudoed

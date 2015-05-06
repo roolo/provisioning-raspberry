@@ -9,6 +9,6 @@
   file: dest=~/.git state=directory
 
 - name: Copy git global ignore file
-  copy: 'src=gitignore_global dest="{{git_gitignore_global_path}}" force=yes'
+  copy: src=gitignore_global dest=~/.gitignore_global force=yes
   notify:
     - Configure the global ignore file

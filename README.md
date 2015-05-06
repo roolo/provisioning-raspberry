@@ -8,7 +8,9 @@
 - [ssh access to the RaspberryPi machine without password](http://www.linuxproblem.org/art_9.html)
 - [Ansible installed on local machine](http://docs.ansible.com/intro_installation.html)
 
-## Covers
+## Name this section
+
+### Covers
 
 - install [Git](http://git-scm.com)
 	- make some default global ignore
@@ -22,18 +24,19 @@
 	- install [Ruby](https://www.ruby-lang.org/) (version 2.2.2 by now)
 - install VNC server 
 
-## Does not cover
+### Does not cover
 
 *Try `raspi-config` for this stuff*
 
 - timezone/time setup
 - system partition expansion
 
+### Todos
+
+- Wi-fi dongle
+- Name the section
+
 ## Tips
-Some tasks takes lot of time to finish on RasperryPi. If you want to avoid them add `--skip-tags "long"` in file Makefile in this directory at the end of line with ansible command
+Some tasks takes lot of time to finish on RasperryPi. If you want to avoid them add `--skip-tags "long"` in file Makefile in this directory at the end of line with ansible command.
 
-## Todos
-
-- [ ] VNC server
-- [ ] Bonjour
-
+After everything is done, affected Raspberry should be reachable on network via `raspimir.local`

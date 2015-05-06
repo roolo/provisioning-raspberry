@@ -16,6 +16,7 @@
       - curl
       - wget
       - tmux
+      - libnss-mdns # Bonjour
     projects:
     ruby:
       version: ruby-2.2.2

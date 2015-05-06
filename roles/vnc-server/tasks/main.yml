@@ -16,3 +16,11 @@
   sudo:     yes
   tags:
     - sudoed
+
+- name: Propagate VNC server via Bonjour
+  copy: src=vncserver-avahi.xml dest=/etc/avahi/services/vncserver.service
+  sudo: yes
+  tags:
+    - sudoed
+  notify:
+    - Reload avahi

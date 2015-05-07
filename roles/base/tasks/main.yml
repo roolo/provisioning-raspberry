@@ -17,6 +17,9 @@
               regexp=^{{ item.text | regex_replace('\=.*$', '') }}
               state=present
               dest=/boot/config.txt
+  sudo: yes
+  tags:
+    - sudoed
   with_items:
     - text: 'disable_overscan=0'
     - text: 'overscan_left=-160'

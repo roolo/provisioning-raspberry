@@ -26,3 +26,9 @@
     - text: 'overscan_right=-160'
     - text: 'overscan_top=-160'
     - text: 'overscan_bottom=-160'
+
+- name: Configure keyboard
+  copy: src=keyboard dest=/etc/default/keyboard mode=644
+  sudo: yes
+  tags:
+    - sudoed

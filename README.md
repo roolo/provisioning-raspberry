@@ -39,3 +39,5 @@
 Some tasks takes lot of time to finish on RasperryPi. If you want to avoid them add `--skip-tags "long"` in file Makefile in this directory at the end of line with ansible command.
 
 After everything is done, affected Raspberry should be reachable on network via `raspimir.local`
+
+If you are using some turbo-secure password for connecting to Wi-fi AP, use `wpa_passphrase` result instead of just the plaintext password in `wpa_supplicant.conf`

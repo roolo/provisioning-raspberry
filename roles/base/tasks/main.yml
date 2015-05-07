@@ -12,6 +12,12 @@
   tags:
     - sudoed
 
+- name: Name it more
+  lineinfile: dest=/etc/hosts line='127.0.1.1       {{machine_name}}' regexp=^127\.0\.1\.1
+  sudo: yes
+  tags:
+    - sudoed
+
 - name: Setup overscan
   lineinfile: line={{item.text}}
               regexp=^{{ item.text | regex_replace('\=.*$', '') }}

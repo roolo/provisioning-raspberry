@@ -22,7 +22,8 @@
 	- my favorite plugins by Vundle
 - install [RVM](https://rvm.io)
 	- install [Ruby](https://www.ruby-lang.org/) (version 2.2.2 by now)
-- install VNC server 
+- install VNC server
+- setups Wifi dongle (Edimax EW-7811UN)
 
 ### Does not cover
 
@@ -32,8 +33,6 @@
 - system partition expansion
 
 ### Todos
-
-- Wi-fi dongle
 - Name the section
 
 ## Tips

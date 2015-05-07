@@ -1,0 +1,6 @@
+---
+- name: Setup modprobe options
+  copy: src=8192cu.conf dest='/etc/modprobe.d/8192cu.conf'
+  sudo: yes
+  tags:
+    - sudoed

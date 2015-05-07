@@ -7,6 +7,7 @@
     - { role: vim-machine,   tags: ['vim']  }
     - { role: ruby-dev,      tags: ['ruby'] }
     - { role: vnc-server,    tags: ['vnc']  }
+    - { role: wifi-client,   tags: ['wifi'] }
   vars:
     packages:
       - openssl

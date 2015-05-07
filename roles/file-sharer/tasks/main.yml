@@ -1,0 +1,14 @@
+---
+# netatalk -- Apple Filesharing Protocol
+- name: Install netatalk
+  apt:  name=netatalk state=present
+  sudo: yes
+  tags:
+    - sudoed
+
+- name: Share attached media
+  lineinfile: dest=/etc/netatalk/AppleVolumes.default
+              line='/media                  "Media"'
+  sudo: yes
+  tags:
+    - sudoed

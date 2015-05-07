@@ -8,6 +8,7 @@
     - { role: ruby-dev,      tags: ['ruby'] }
     - { role: vnc-server,    tags: ['vnc']  }
     - { role: wifi-client,   tags: ['wifi'] }
+    - { role: file-sharer,   tags: ['files', 'sharing'] }
   vars:
     packages:
       - openssl
@@ -18,7 +19,6 @@
       - wget
       - tmux
       - libnss-mdns # Bonjour
-      - netatalk # Apple Filesharing Protocol
     projects:
     ruby:
       version: ruby-2.2.2
